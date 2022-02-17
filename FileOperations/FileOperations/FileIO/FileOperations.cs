@@ -44,6 +44,14 @@ namespace FileOperations
             }
 
         }
+        public static void CopyFileContent(string path)
+        {
+            string desti= @"G:\shabana\FileOperations\FileOperations\FileOperations\FileIO\CopiedFile.txt";
+            if (IsFileExists(path))
+            {
+                File.Copy(path, desti);
+            }
+        }
     }
 }
            

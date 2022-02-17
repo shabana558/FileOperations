@@ -24,6 +24,17 @@ namespace FileOperations
                 return false;
             }
         }
+        public static void ReadLineByLine(string path)
+        {
+            if (!IsFileExists(path))
+            {
+                string[] lines = File.ReadAllLines(path);
+                foreach (string line in lines)
+                {
+                    Console.WriteLine(line);
+                }
+            }
+        }
     }
 }
            

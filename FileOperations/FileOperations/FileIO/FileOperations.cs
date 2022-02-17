@@ -60,6 +60,34 @@ namespace FileOperations
                 File.Delete(desti);
             }
         }
+        //Read data using StreamReader
+        public static void ReadDataUsingStreamReader(string path)
+        {
+            if (IsFileExists(path))
+            {
+                string line = "";
+                StreamReader sr = File.OpenText(path);
+                //if (sr.ReadLine() != null)
+                //    line = sr.ReadLine();
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+                sr.Close();
+            }
+        }
+        //Write data using StreamWrite
+        public static void WriteDataIntoFileUsingStreamWriter(string path)
+        {
+            if (IsFileExists(path))
+            {
+                StreamWriter sw = File.AppendText(path);
+                sw.WriteLine("\n Testing Write operation");
+                sw.Close();
+            }
+        }
+
     }
 }
            

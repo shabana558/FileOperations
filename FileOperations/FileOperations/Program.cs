@@ -17,6 +17,8 @@ namespace FileOperations
             Console.WriteLine("Enter 3: To Read all lines in file by using ReadAtOnce method");
             Console.WriteLine("Enter 4: To CopyFileContent ");
             Console.WriteLine("Enter 5: To Deletefile ");
+            Console.WriteLine("Enter 6: To Read the file using StreamReader ");
+            Console.WriteLine("Enter 7: To write data into the file using StreamWriter ");
             int num = Convert.ToInt32(Console.ReadLine());
             switch (num)
             {
@@ -34,6 +36,12 @@ namespace FileOperations
                     break;
                 case 5:
                     FileOperations.DeleteFile();
+                    break;
+                case 6:
+                    FileOperations.ReadDataUsingStreamReader(path);
+                    break;
+                case 7:
+                    FileOperations.WriteDataIntoFileUsingStreamWriter(path);
                     break;
             }
         

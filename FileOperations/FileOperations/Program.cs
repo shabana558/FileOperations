@@ -16,6 +16,7 @@ namespace FileOperations
             Console.WriteLine("Enter 2: To Read all lines in file by using ReadAllLines method");
             Console.WriteLine("Enter 3: To Read all lines in file by using ReadAtOnce method");
             Console.WriteLine("Enter 4: To CopyFileContent ");
+            Console.WriteLine("Enter 5: To Deletefile ");
             int num = Convert.ToInt32(Console.ReadLine());
             switch (num)
             {
@@ -31,7 +32,11 @@ namespace FileOperations
                 case 4:
                     FileOperations.CopyFileContent(path);
                     break;
+                case 5:
+                    FileOperations.DeleteFile();
+                    break;
             }
+        
         }
         
     }

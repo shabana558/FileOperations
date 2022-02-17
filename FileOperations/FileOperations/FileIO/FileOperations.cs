@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace FileOperations
 {
     internal class FileOperations
-    {   
+    {
         // File exists or not
         public static bool IsFileExists(string path)
         {
@@ -39,17 +39,25 @@ namespace FileOperations
         {
             if (IsFileExists(path))
             {
-                string line=File.ReadAllText(path);
+                string line = File.ReadAllText(path);
                 Console.WriteLine(line);
             }
 
         }
         public static void CopyFileContent(string path)
         {
-            string desti= @"G:\shabana\FileOperations\FileOperations\FileOperations\FileIO\CopiedFile.txt";
+            string desti = @"G:\shabana\FileOperations\FileOperations\FileOperations\FileIO\CopiedFile.txt";
             if (IsFileExists(path))
             {
                 File.Copy(path, desti);
+            }
+        }
+        public static void DeleteFile()
+        {
+            string desti = @"G:\shabana\FileOperations\FileOperations\FileOperations\FileIO\CopiedFile.txt";
+            if (IsFileExists(desti))
+            {
+                File.Delete(desti);
             }
         }
     }

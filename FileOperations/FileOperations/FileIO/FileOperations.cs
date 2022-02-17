@@ -35,6 +35,15 @@ namespace FileOperations
                 }
             }
         }
+        public static void ReadAtOnce(string path)
+        {
+            if (IsFileExists(path))
+            {
+                string line=File.ReadAllText(path);
+                Console.WriteLine(line);
+            }
+
+        }
     }
 }
            

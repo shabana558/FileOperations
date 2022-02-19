@@ -27,8 +27,8 @@ namespace FileOperations.Xml
                 xml.Serialize(stream, stu);
             }
         }
-            public static void XmlDeserialize()
-            {
+        public static void XmlDeserialize()
+        {
             string xmlFilePath = @"G:\shabana\FileOperations\FileOperations\FileOperations\Xml\XmlFileOperations.Xml";
             List<student> students = new List<student>()
             {
@@ -36,9 +36,9 @@ namespace FileOperations.Xml
                 new student(){FName="AmeerBasha",LName="shaik",Address="porumamilla",Zipcode= 516193 }
             };
             XmlSerializer xml = new XmlSerializer(typeof(student));
-            student res=(student)xml.Deserialize(stream);
+            student res = (student)xml.Deserialize(stream);
             Console.WriteLine(res);
-            }
+        }
         public class student
         {
             public string FName { get; set; }
@@ -53,5 +53,6 @@ namespace FileOperations.Xml
 
         }
     }
-    }
+}
+    
     
